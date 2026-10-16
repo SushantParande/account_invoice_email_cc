@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="account_move_send_form_cc" model="ir.ui.view">
+        <field name="name">account.move.send.form.cc</field>
+        <field name="model">account.move.send</field>
+        <field name="inherit_id" ref="account.account_move_send_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mail_subject']" position="before">
+                <field name="mail_cc"
+                       placeholder="name@example.com, another@example.com"
+                       invisible="not display_mail_composer"
+                       string="CC"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
